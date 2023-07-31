@@ -82,8 +82,8 @@ Clone this repository to your desired folder:
 Install this project with: 
 
 ```sh
- cd morse_code_reader
- gem install
+ cd school_library
+ bundle install
 ```
 
 ### Usage
@@ -91,7 +91,7 @@ Install this project with:
 To run the project execute the following command:
 
 ```sh
-   rails server
+  ruby <name of file>
 ```
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
