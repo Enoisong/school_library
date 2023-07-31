@@ -1,6 +1,6 @@
  <a name="readme-top"></a>
  <div align="center">
-   <h1><b>enumerables</b></h1>
+   <h1><b>school_library</b></h1>
   </div>
 
   <h3>Ruby Project</h3>
@@ -26,13 +26,13 @@
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-# 📖 [enumerables] <a name="about-project"></a> 
+# 📖 [school_library] <a name="about-project"></a> 
  
- ### How to build the "enumerables"
+ ### How to build the "school_library"
 
  - Use Ruby
  - Use Ruby best practices
- - Implement using Ruby methods
+ - Implement using Ruby classes
 
  ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,7 +50,10 @@
 
  ### Key Features <a name="key-features"></a>
 
-  - **[Enumerables ruby methods]**
+  - **[Abstraction]**
+  - **[Encapsulation]**
+  - **[Inheritance]**
+  - **[Polymorphism]**
   
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +74,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Enoisong/enumerables.git
+  git clone https://github.com/Enoisong/school_library.git
 ```
 
 ### Install
@@ -79,8 +82,8 @@ Clone this repository to your desired folder:
 Install this project with: 
 
 ```sh
- cd morse_code_reader
- gem install
+ cd school_library
+ bundle install
 ```
 
 ### Usage
@@ -88,7 +91,7 @@ Install this project with:
 To run the project execute the following command:
 
 ```sh
-   rails server
+  ruby <name of file>
 ```
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -101,16 +104,11 @@ To run the project execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
 
-👤 **Aklilu Mekonnen**
-
-- GitHub: [@akezeth](https://github.com/akezeth)
-- Twitter: [@akezeth](https://twitter.com/akezeth)
-- LinkedIn: [Aklilu Mekonnen](https://www.linkedin.com/in/aklilu-mekonnen/)
 
 ## 🔭 Future Features <a name="future-features"></a> 
  
-- **[Animals escape attempt]**
-- **[directory for animals clinic]**
+- **[User interface]**
+- **[Deployment online]**
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
