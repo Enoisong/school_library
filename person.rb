@@ -1,15 +1,15 @@
- class Person 
+class Person
   attr_accessor :name, :rentals
-  
-  def initialize(name)      
+
+  def initialize(name)
     @name = name
-    @rentals = []     
+    @rentals = []
   end
 
   def add_rental(book, date)
     rental = Rental.new(date, book, self)
     @rentals << rental
     book.rentals << rental
-    rental    
+    rental
   end
 end

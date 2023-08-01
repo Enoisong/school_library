@@ -1,9 +1,9 @@
- class Student
+class Student
   attr_accessor :name, :classroom, :rentals
 
-  def initialize(name) 
+  def initialize(name)
     @name = name
-    @classroom = nil    
+    @classroom = nil
     @rentals = []
   end
 
