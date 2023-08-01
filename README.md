@@ -30,9 +30,9 @@
  
  ### How to build the "school_library"
 
- - Use Ruby
- - Use Ruby best practices
- - Implement using Ruby classes
+ -  Use Ruby
+ -  Use Ruby best practices
+ -  Implement using Ruby classes
 
  ## 🛠 Built With <a name="built-with"></a>
 
