@@ -30,9 +30,9 @@
  
  ### How to build the "school_library"
 
- - Use Ruby
- - Use Ruby best practices
- - Implement using Ruby classes
+ -  Use Ruby
+ -  Use Ruby best practices
+ -  Implement using Ruby classes
 
  ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,7 +41,9 @@
  > Implement Gitflow based on <a href="https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md">Gitflow</a> 
 
  ### Tech Stack <a name="tech-stack"></a>
-- **[Ruby]**
+ 
+  - **[Ruby]**
+ 
 
  ### Key Features <a name="key-features"></a>
 
