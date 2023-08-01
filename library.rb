@@ -1,35 +1,12 @@
-require_relative 'classroom'
-require_relative 'student'
-require_relative 'book'
-require_relative 'rental'
+require_relative 'person'
+require_relative 'capitalize_decorator'
+require_relative 'trimmer_decorator'
 
-# Creating classroom and students
-classroom = Classroom.new('Biology Class')
-student1 = Student.new('Enobong')
-student2 = Student.new('Isong')
+person = Person.new(22, 'maximilianus')
+puts person.correct_name
 
-# Adding students to the classroom
-classroom.add_student(student1)
-classroom.add_student(student2)
+capitalized_person = CapitalizeDecorator.new(person)
+puts capitalized_person.correct_name
 
-# Creating books and rentals
-book1 = Book.new('Biology Exploring Life', 'Neil Campbell')
-book2 = Book.new('The Unity and Diversity of Life', 'Cecie Starr')
-book1.add_rental(student1, '2023-08-01')
-book2.add_rental(student2, '2023-08-15')
-
-# Printing classroom information
-puts "Classroom: #{classroom.label}"
-puts 'Students in Classroom:'
-classroom.students.each do |student|
-  puts "- #{student.name}"
-end
-
-# To get rentals for each student
-puts "\nRentals:"
-classroom.students.each do |student|
-  puts "#{student.name} has rented:"
-  student.rentals.each do |rental|
-    puts "- #{rental.book.title} (Date: #{rental.date})"
-  end
-end
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+puts capitalized_trimmed_person.correct_name
