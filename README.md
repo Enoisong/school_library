@@ -41,12 +41,7 @@
  > Implement Gitflow based on <a href="https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md">Gitflow</a> 
 
  ### Tech Stack <a name="tech-stack"></a>
- <details>
- <summary>Language</summary>
-   <ul>
-   <li><a href="#">ruby</a></li>
-   </ul>
-  </details>
+- **[Ruby]**
 
  ### Key Features <a name="key-features"></a>
 
