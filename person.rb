@@ -1,30 +1,37 @@
-require_relative 'corrector'
-require_relative 'rental'
+require './interface'
+require './capitalize_decor'
+require './trim_decor'
 
-class Person 
+class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
-  def initialize(age:, name: 'Unknown', parent_permission: true) 
+  def initialize(age, name, parent_permission: true)
+    super()
     @id = Random.rand(1..1000)
-    @corrector = Corrector.new
-    @name = validate_name(name)
+    @name = name
     @age = age
     @parent_permission = parent_permission
     @rentals = []
   end
 
+  def correct_name
+    @name
+  end
+
+  def add_rental(date, book)
+    Rental.new(date, self, book)
+  end
+
+  private
+
   def of_age?
-    @age >= 18
+    @age > 18
   end
 
-  def validate_name(name)
-    @corrector.correct_name(name)
-  end
+  public
 
-  def add_rental(book, date)
-    rental = Rental.new(date, self, book)
-    @rentals << rental
-    rental
+  def can_use_services?
+    of_age? || @parent_permission
   end
 end

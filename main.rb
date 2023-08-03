@@ -1,42 +1,44 @@
 require_relative 'app'
- 
 def main
+  puts "\nWelcome to School Library App!\n\n"
   app = App.new
-  status = true
-  puts 'Welcome to School Library App!'
-  while status
-    puts  
-    puts 'Please choose an option by entering a number:' 
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Quit'
-    option = gets.chomp
+  loop do
+    options
+    choice = gets.chomp.to_i
+    handle_input(choice, app)
+  end
+end
 
-    case option
-    when '1'
-      app.all_books
-    when '2'
-      app.all_people
-    when '3'
-      app.create_person
-    when '4'
-      app.create_book
-    when '5'
-      app.create_rental
-    when '6'
-      app.all_rentals_id
-    when '7'
-      puts 'Thank you for using this app!'
-      puts
-      status = false
-    else
-      puts 'Sorry, you choose a wrong option'
-      puts   
-    end
+def options
+  puts "\nPlease choose an option by entering a number:"
+  puts "\n1 - List all books"
+  puts '2 - List all people'
+  puts '3 - Create a person'
+  puts '4 - Create a book'
+  puts '5 - Create a rental'
+  puts '6 - List all rentals for a given person id'
+  puts "7 - Quit\n"
+  puts "\n"
+end
+
+def handle_input(choice_input, app)
+  actions = {
+    1 => :list_all_books,
+    2 => :list_all_people,
+    3 => :create_person,
+    4 => :create_book,
+    5 => :create_rental,
+    6 => :list_all_rentals
+  }
+
+  action = actions[choice_input]
+  if action
+    app.send(action)
+  elsif choice_input == 7
+    puts 'Exited. Have a nice day!'
+    exit
+  else
+    puts 'Invalid option'
   end
 end
 
