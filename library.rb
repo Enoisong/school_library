@@ -1,12 +1,38 @@
-require_relative 'person'
-require_relative 'capitalize_decorator'
-require_relative 'trimmer_decorator'
+require_relative 'app'
 
-person = Person.new(22, 'maximilianus')
-puts person.correct_name
+ def menu(app)
+    app.options
+    print '>>> :'
+    gets.chomp.to_i
+ end
 
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
+ def manage_selection(app, option)
+    tasks = {
+        1 => :list_books,
+        2 => :list_people,
+        3 => :create_person,
+        4 => :create_book,
+        5 => :create_rental,
+        6 => :list_rental,
+        7 => :exit,
+        default: :invalid_option
+ }
 
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
+ selection = tasks[option] || tasks[:default]
+ app.send(selection)
+
+ return unless option == 7
+
+ exit
+end
+
+def main
+    app = App.new
+
+    loop do
+        manage_selection(app, menu(app))
+        puts "\n"
+    end
+end
+
+main
