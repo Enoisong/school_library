@@ -102,7 +102,6 @@ To run the project execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/Enobongmisong)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/enobong-isong/)
 
-
 ## 🔭 Future Features <a name="future-features"></a> 
  
 - **[User interface]**
