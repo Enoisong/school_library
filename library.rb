@@ -17,7 +17,6 @@ require_relative 'app'
         7 => :exit,
         default: :invalid_option
  }
-
  selection = tasks[option] || tasks[:default]
  app.send(selection)
 
