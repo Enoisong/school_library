@@ -19,16 +19,6 @@ def create_person
     puts 'Incorrect input'
   end
 end
-#     case choice
-#     when 1
-#       create_student
-#     when 2
-#       create_teacher
-#     else
-#       puts 'Incorrect input'
-#     end
-#   end
-
 
 def create_student
   print 'Age: '
