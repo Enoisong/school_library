@@ -40,7 +40,7 @@ class App
     print 'Age: '
     age = Integer(gets.chomp)
     print 'Name: '
-    name = String(gets.chomp)
+    name = String(gets.chomp)    
     print 'Has parent permission? [Y/N]: '
     permission = gets.chomp.downcase
 
