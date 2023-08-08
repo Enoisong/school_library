@@ -13,11 +13,7 @@ def create_rental
   selected_person = @people[gets.chomp.to_i]
   puts 'Date (YYYY-MM-DD):'
   input_date = gets.chomp
-  created_rental = {
-    'date' => input_date,
-    'book' => selected_book,
-    'person' => selected_person
-  }
+  created_rental = { 'date' => input_date, 'book' => selected_book, 'person' => selected_person }
   @rentals << created_rental
   puts 'Rental Created successfully'
 end
