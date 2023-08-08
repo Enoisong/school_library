@@ -1,15 +1,17 @@
 def create_book
   print 'Title: '
-  title = String(gets.chomp)
+  title = gets.chomp
   print 'Author: '
-  author = String(gets.chomp)
-  book = Book.new(title, author)
+  author = gets.chomp
+  book = { 'title' => title, 'author' => author } # Create a hash for the book
   @books.push(book)
   puts "\nBook created successfully"
 end
 
 def list_all_books
   @books.each do |book|
-    puts "Title: '#{book.title}', Author: '#{book.author}'"
+    book_title = book['title']   # Access title attribute from book hash
+    book_author = book['author'] # Access author attribute from book hash
+    puts "Title: '#{book_title}', Author: '#{book_author}'"
   end
 end

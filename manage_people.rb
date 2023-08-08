@@ -21,41 +21,43 @@ def create_person
 end
 
 def create_student
-  print 'Age: '
-  age = Integer(gets.chomp)
-  print 'Name: '
-  name = String(gets.chomp)
+  age, name = common_information
   print 'Has parent permission? [Y/N]: '
   permission = gets.chomp.downcase
 
   case permission
   when 'y'
-    student = Student.new(nil, age, name, parent_permission: true)
+    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'parent_permission' => true, 'classroom' => 'classroom' }
   when 'n'
-    student = Student.new(nil, age, name, parent_permission: false)
+    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'parent_permission' => false, 'classroom' => 'classroom' }
   else
     puts 'Incorrect input'
     return
   end
 
   @people << student
-  puts "\nPerson created successfully"
+  puts "\nStudent created successfully"
 end
 
 def create_teacher
-  print 'Age: '
-  age = Integer(gets.chomp)
-  print 'Name: '
-  name = String(gets.chomp)
+  age, name = common_information
   print 'Specialization: '
   specialization = String(gets.chomp)
-  teacher = Teacher.new(name, age, specialization)
+  teacher = { 'type' => 'Teacher', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'specialization' => specialization }
   @people << teacher
-  puts 'Person created successfully'
+  puts 'Teacher created successfully'
+end
+def generate_unique_id
+  Time.now.to_i
 end
 
 def list_all_people
   @people.each do |person|
-    puts "[#{person.class}] Name: #{person.name}, Id: #{person.id}, Age: #{person.age}"
+    if person.is_a?(Hash) # Check if the object is a hash
+      puts "[#{person["type"]}] Name: #{person["name"]}, Id: #{person["id"]}, Age: #{person["age"]}"
+    else
+      puts "Invalid person data: #{person}"
+    end
   end
 end
+
