@@ -10,7 +10,7 @@ end
 
 def list_all_books
   @books.each do |book|
-    book_title = book['title']   # Access title attribute from book hash
+    book_title = book['title'] # Access title attribute from book hash
     book_author = book['author'] # Access author attribute from book hash
     puts "Title: '#{book_title}', Author: '#{book_author}'"
   end

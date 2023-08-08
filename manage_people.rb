@@ -27,9 +27,11 @@ def create_student
 
   case permission
   when 'y'
-    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'parent_permission' => true, 'classroom' => 'classroom' }
+    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age,
+                'parent_permission' => true, 'classroom' => 'classroom' }
   when 'n'
-    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'parent_permission' => false, 'classroom' => 'classroom' }
+    student = { 'type' => 'Student', 'id' => generate_unique_id, 'name' => name, 'age' => age,
+                'parent_permission' => false, 'classroom' => 'classroom' }
   else
     puts 'Incorrect input'
     return
@@ -43,10 +45,12 @@ def create_teacher
   age, name = common_information
   print 'Specialization: '
   specialization = String(gets.chomp)
-  teacher = { 'type' => 'Teacher', 'id' => generate_unique_id, 'name' => name, 'age' => age, 'specialization' => specialization }
+  teacher = { 'type' => 'Teacher', 'id' => generate_unique_id, 'name' => name, 'age' => age,
+              'specialization' => specialization }
   @people << teacher
   puts 'Teacher created successfully'
 end
+
 def generate_unique_id
   Time.now.to_i
 end
@@ -54,10 +58,9 @@ end
 def list_all_people
   @people.each do |person|
     if person.is_a?(Hash) # Check if the object is a hash
-      puts "[#{person["type"]}] Name: #{person["name"]}, Id: #{person["id"]}, Age: #{person["age"]}"
+      puts "[#{person['type']}] Name: #{person['name']}, Id: #{person['id']}, Age: #{person['age']}"
     else
       puts "Invalid person data: #{person}"
     end
   end
 end
-

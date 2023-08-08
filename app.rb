@@ -33,5 +33,4 @@ class App
       file.puts JSON.generate(data)
     end
   end
-
 end
