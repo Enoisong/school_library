@@ -42,9 +42,7 @@ def create_rental
         puts "Date: #{date} Book '#{book_title}' by #{book_author}"
       end
     end
-  end
-  
-  
+  end    
   
   
   
