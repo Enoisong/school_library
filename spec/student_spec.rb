@@ -5,7 +5,7 @@ describe Student do
         let(:student) { Student.new(24, 18, 'sdf', parent_permission: false) }
 
         it 'Should create new student' do
-            expect(student).to be_an_instance_of(Students)
+            expect(student).to be_an_instance_of(Student)
         end
 
         it 'Should set name correctly' do

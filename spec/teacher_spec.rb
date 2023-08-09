@@ -1,6 +1,6 @@
 require './teacher'
 
-  describe Teachers do
+  describe Teacher do
   let(:name) { "Jane Isong" }
   let(:age) { 35 }
   let(:specialization) { "Medicine" }
