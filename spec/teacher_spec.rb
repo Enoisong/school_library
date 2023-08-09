@@ -1,9 +1,9 @@
 require './teacher'
 
-  describe Teacher do
-  let(:name) { "Jane Isong" }
+describe Teacher do
+  let(:name) { 'Jane Isong' }
   let(:age) { 35 }
-  let(:specialization) { "Medicine" }
+  let(:specialization) { 'Medicine' }
 
   subject(:teacher) { described_class.new(name, age, specialization) }
 
@@ -23,5 +23,5 @@ require './teacher'
     it 'returns true' do
       expect(teacher.can_use_services).to be true
     end
-  end 
+  end
 end
