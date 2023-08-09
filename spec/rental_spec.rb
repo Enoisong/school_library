@@ -6,7 +6,7 @@ describe Rental do
   let(:book) { { title: "life", author: "reko", rentals: [] } }
   let(:person) { { id: 1, name: 'racha', rentals: [] } }
 
-  subject { Rental.new(date, book, person) }
+  subject { Rentals.new(date, book, person) }
 
   describe '#initialize' do
     it 'adds the rental to the book rentals list' do
